@@ -16,7 +16,7 @@ Plugins live under `~/.pact/plugins/<name>-<version>` and are installed with the
 [plugin CLI](https://docs.pact.io/implementation_guides/pact_plugins/cli), for example:
 
 ```shell
-pact-plugin-cli install https://github.com/pact-foundation/pact-protobuf-plugin/releases/tag/v-0.4.0
+pact-plugin-cli install https://github.com/pact-foundation/pact-protobuf-plugin/releases/tag/v-0.8.0
 ```
 
 Sample
@@ -45,7 +45,7 @@ public class GreeterClientTests : IDisposable
             Outputters = new[] { new XunitOutput(output) }
         });
 
-        this.pact = v4.WithSynchronousPluginInteractions("protobuf", "0.4.0", transport: "grpc");
+        this.pact = v4.WithSynchronousPluginInteractions("protobuf", "0.8.0", transport: "grpc");
     }
 
     [Fact]

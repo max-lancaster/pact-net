@@ -33,7 +33,7 @@ namespace GrpcGreeterClient.Tests
             };
 
             this.pact = Pact.V4("grpc-greeter-client", "grpc-greeter", config)
-                .WithSynchronousPluginInteractions("protobuf", "0.4.0", transport: "grpc");
+                .WithSynchronousPluginInteractions("protobuf", "0.8.0", transport: "grpc");
         }
 
         [Fact]

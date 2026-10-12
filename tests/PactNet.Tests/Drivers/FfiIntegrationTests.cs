@@ -42,8 +42,7 @@ namespace PactNet.Tests.Drivers
                 interaction.Given("provider state");
                 interaction.GivenWithParam("state with param", "foo", "bar");
                 interaction.WithRequest("POST", "/path");
-                interaction.WithRequestHeader("X-Request-Header", "request1", 0);
-                interaction.WithRequestHeader("X-Request-Header", "request2", 1);
+                interaction.WithRequestHeader("X-Request-Header", "request1, request2", 0);
                 interaction.WithQueryParameter("param", "value", 0);
                 interaction.WithRequestBody("application/json", @"{""foo"":42}");
 
